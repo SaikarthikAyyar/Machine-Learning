@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI';
+    background: #f5f7fb;
+}
+
+.main {
+    display: flex;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 300px;
+    background: white;
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.valid {
+    color: green;
+}
+
+.chips span {
+    background: #e0e7ff;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.disease {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 5px 0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.disease.selected {
+    border: 2px solid blue;
+    background: #eef2ff;
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px;
+    width: 100%;
+    background: linear-gradient(90deg, blue, purple);
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+/* CONTENT */
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.card h2 {
+    margin: 5px 0;
+}
+
+.bar {
+    height: 8px;
+    background: #eee;
+    border-radius: 10px;
+}
+
+.bar div {
+    height: 8px;
+    border-radius: 10px;
+}
+
+/* COLORS */
+.blue div { background: #3b82f6; }
+.green div { background: #22c55e; }
+.red div { background: #ef4444; }
+.purple div { background: #9333ea; }
+
+/* GRAPH */
+.graph {
+    margin-top: 30px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+}
