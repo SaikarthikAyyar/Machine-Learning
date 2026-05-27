@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Drug Simulation</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="main">
+
+    <!-- LEFT PANEL -->
+    <div class="sidebar">
+
+        <h2>Simulation Parameters</h2>
+
+        <label>Drug / Compound Name</label>
+        <input id="smiles" placeholder="Enter SMILES">
+
+        <p class="valid">✔ Valid compound found</p>
+
+        <div class="chips">
+            <span onclick="setDrug('aspirin')">Aspirin</span>
+            <span onclick="setDrug('ibuprofen')">Ibuprofen</span>
+            <span onclick="setDrug('metformin')">Metformin</span>
+        </div>
+
+        <h3>Target Disease</h3>
+
+        <div class="disease selected" onclick="selectDisease('inflammation', this)">🔥 Inflammation</div>
+        <div class="disease" onclick="selectDisease('cancer', this)">🎗 Cancer</div>
+        <div class="disease" onclick="selectDisease('diabetes', this)">💉 Diabetes</div>
+
+        <button onclick="runSimulation()">🚀 Start Drug Journey Simulation</button>
+
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="content">
+
+        <div class="cards">
+
+            <div class="card blue">
+                <h4>Binding Affinity</h4>
+                <h2 id="binding">--%</h2>
+                <div class="bar"><div id="bar-binding"></div></div>
+            </div>
+
+            <div class="card green">
+                <h4>Pathway Activation</h4>
+                <h2 id="pathway">--%</h2>
+                <div class="bar"><div id="bar-pathway"></div></div>
+            </div>
+
+            <div class="card red">
+                <h4>Toxicity Risk</h4>
+                <h2 id="toxicity">--%</h2>
+                <div class="bar"><div id="bar-toxicity"></div></div>
+            </div>
+
+            <div class="card purple">
+                <h4>Cellular Response</h4>
+                <h2 id="cellular">--%</h2>
+                <div class="bar"><div id="bar-cellular"></div></div>
+            </div>
+
+        </div>
+
+        <div class="graph">
+            <h3>Disease Severity Trajectory</h3>
+            <canvas id="chart"></canvas>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="/static/script.js"></script>
+</body>
+</html>
